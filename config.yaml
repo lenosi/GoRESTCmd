@@ -1,0 +1,39 @@
+
+# This variable is used to specify the API key that clients must provide when making requests to the API endpoints. 
+# It is a good practice to use an API key to authenticate clients and restrict access to the API to authorized users only. 
+# Make sure to keep your API key secret and do not share it publicly.
+api_key: your-api-key
+
+# This variable specifies the maximum number of concurrent command executions that the server can handle.
+# It is a good practice to limit the number of concurrent requests to prevent resource exhaustion and ensure
+# that the server can handle incoming requests efficiently. 
+# Depending on your server's resources, you can adjust this value to a suitable number.
+concurrent_limit: 5
+
+# This variable specifies the port number on which the server listens for incoming requests. 
+# By default, HTTP requests are sent to port 80 and HTTPS requests are sent to port 443. 
+# However, you can specify any available port number, such as 8080, to listen for incoming requests.
+port: 8080
+
+# This variable specifies whether to enable TLS encryption for the server.
+# Enabling TLS is recommended to ensure secure communication between clients and the server. 
+# By default, this variable is set to false, which means TLS is not enabled.
+server_tls: false
+
+# This variable specifies the path to the server certificate file.
+# The server certificate is required for setting up the TLS connection. 
+# Make sure to provide a valid path to the certificate file.
+server_cert_path: server.cert
+
+# This variable specifies the path to the server private key file.
+# The private key is required for setting up the TLS connection. 
+# Make sure to provide a valid path to the private key file.
+server_key_path: server.key
+
+# This variable is used to specify the list of shell commands that are allowed to be executed by clients
+# It is a good practice to restrict the commands that clients can execute to prevent malicious commands 
+# from being executed on the server. Make sure to include only the commands that are necessary for your use case.
+allowed_commands:
+  - echo
+  - ping
+  - ls
